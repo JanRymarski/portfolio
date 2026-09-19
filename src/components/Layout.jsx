@@ -128,11 +128,11 @@ export default function Layout() {
         </a>
         <a
           className="home__footer__link"
-          href="https://www.instagram.com/"
+          href="./JanRymarski_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          instagram
+          cv
         </a>
       </footer>
     </div>
