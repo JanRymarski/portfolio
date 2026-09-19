@@ -19,7 +19,9 @@ export default function Navigation() {
   return (
     <nav className="nav">
       {onHome ? (
-        <span className="nav__name">Jan Rymarski</span>
+        <Link to="/about" className="nav__name" onClick={close}>
+          Jan Rymarski
+        </Link>
       ) : (
         <button
           type="button"

@@ -85,7 +85,9 @@ export default function Layout() {
   return (
     <div className="page" ref={pageRef}>
       <Navigation />
-      <Outlet />
+      <div className="page__content">
+        <Outlet />
+      </div>
       <footer
         className={`home__footer${onHome ? " home__footer--fixed" : ""}`}
       >

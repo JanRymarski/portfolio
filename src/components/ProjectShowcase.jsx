@@ -67,6 +67,7 @@ export default function ProjectShowcase({ reveal = false }) {
           className="project-slider__thumb"
           style={{ width: `${progress * 100}%` }}
         />
+        <span className="project-slider__hint">scroll to see all projects</span>
       </div>
     </section>
   );

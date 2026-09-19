@@ -18,14 +18,15 @@ export default function Home() {
     const split = () => {
       if (title.dataset.split) return;
       title.dataset.split = "1";
-      title.innerHTML = TITLE.split("")
-        .map(
-          (ch) =>
-            `<span class="home__title__letter" aria-hidden="true">${
-              ch === " " ? "&nbsp;" : ch
-            }</span>`
-        )
-        .join("");
+      title.innerHTML =
+        TITLE.split("")
+          .map(
+            (ch) =>
+              `<span class="home__title__letter" aria-hidden="true">${
+                ch === " " ? "&nbsp;" : ch
+              }</span>`
+          )
+          .join("");
     };
 
     const startWave = (letters) => {
