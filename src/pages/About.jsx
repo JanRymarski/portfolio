@@ -77,7 +77,7 @@ export default function About() {
           </p>
 
 
-          <a className="about__cv" href="./cv.pdf" download data-reveal>
+          <a className="about__cv" href="./JanRymarski_CV.pdf" download data-reveal>
             download my cv
           </a>
         </div>
