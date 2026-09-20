@@ -3,7 +3,7 @@
   --text: #f2aebb;
   --shadow: rgba(42, 36, 105, 0.35);
   --accent: #ffdde6;
-  --rail-gap: 140px;
+  --rail-gap: clamp(24px, 8vw, 140px);
 }
 
 *,
@@ -180,7 +180,7 @@ img {
 }
 
 .project-rail__item {
-  flex: 0 0 480px;
+  flex: 0 0 clamp(280px, 38vw, 480px);
 }
 
 .project-slider {
@@ -433,18 +433,6 @@ img {
     line-height: 1.05;
     letter-spacing: -0.03em;
     text-transform: lowercase;
-  }
-}
-
-@media (max-width: 1024px) {
-  .project-rail__item {
-    flex-basis: 320px;
-  }
-}
-
-@media (max-width: 640px) {
-  .project-rail__item {
-    flex-basis: 300px;
   }
 }
 
