@@ -59,6 +59,10 @@ img {
     var(--bg);
 }
 
+.page.page--with-footer {
+  padding-bottom: 0;
+}
+
 .page__content {
   position: relative;
   z-index: 1;
@@ -324,6 +328,10 @@ img {
     padding: 0 24px 64px;
   }
 
+  .page.page--with-footer {
+    padding-bottom: 0;
+  }
+
   .case__hero {
     margin: 22px 0 0 calc(50% - 50vw);
   }
@@ -399,7 +407,7 @@ img {
 }
 
 .case {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .case__hero {

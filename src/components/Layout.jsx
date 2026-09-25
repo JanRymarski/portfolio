@@ -148,7 +148,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="page" ref={pageRef}>
+    <div className={`page${onHome ? "" : " page--with-footer"}`} ref={pageRef}>
       <BackgroundField />
       <Navigation />
       <div className="page__content">
