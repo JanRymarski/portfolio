@@ -9,6 +9,23 @@ export default function Navigation() {
 
   const close = () => setMenuOpen(false);
 
+  const jumpToSection = (event, id) => {
+    event.preventDefault();
+    close();
+
+    const scroll = () => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    if (location.pathname === "/") {
+      scroll();
+      return;
+    }
+
+    navigate("/");
+    window.setTimeout(scroll, 0);
+  };
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -19,7 +36,7 @@ export default function Navigation() {
   return (
     <nav className="nav">
       {onHome ? (
-        <Link to="/about" className="nav__name" onClick={close}>
+        <Link to="/" className="nav__name" onClick={close}>
           Jan Rymarski
         </Link>
       ) : (
@@ -53,14 +70,11 @@ export default function Navigation() {
         id="nav-menu"
         className={`nav__right${menuOpen ? " nav__right--open" : ""}`}
       >
-        <Link to="/" onClick={close}>
+        <Link to="/" onClick={(event) => jumpToSection(event, "projects")}>
           projects
         </Link>
-        <Link to="/about" onClick={close}>
+        <Link to="/" onClick={(event) => jumpToSection(event, "about")}>
           about me
-        </Link>
-        <Link to="/contact" onClick={close}>
-          contact
         </Link>
       </div>
     </nav>
